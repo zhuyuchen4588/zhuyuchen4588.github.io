@@ -3,30 +3,10 @@
     <title>A blog| 一个博客</title>
     <link href="https://zhuyuchen4588.github.io/feed.xml" rel="self" />
     <link href="https://zhuyuchen4588.github.io" />
-    <updated>2024-06-22T17:17:48+08:00</updated>
+    <updated>1970-01-01T08:00:00+08:00</updated>
     <author>
         <name>朱宇辰</name>
     </author>
     <id>https://zhuyuchen4588.github.io</id>
 
-    <entry>
-        <title>我的第一篇文章</title>
-        <author>
-            <name>朱宇辰</name>
-        </author>
-        <link href="https://zhuyuchen4588.github.io/free-vpn-or-mian-fei-de-ti-zi.html"/>
-        <id>https://zhuyuchen4588.github.io/free-vpn-or-mian-fei-de-ti-zi.html</id>
-
-        <updated>2024-06-22T15:08:05+08:00</updated>
-            <summary>
-                <![CDATA[
-                    没啥好写的，不想写了
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>没啥好写的，不想写了</p>
-            ]]>
-        </content>
-    </entry>
 </feed>
