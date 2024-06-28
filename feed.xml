@@ -3,7 +3,7 @@
     <title>A blog| 一个博客</title>
     <link href="https://zhuyuchen4588.github.io/feed.xml" rel="self" />
     <link href="https://zhuyuchen4588.github.io" />
-    <updated>2024-06-28T22:00:27+08:00</updated>
+    <updated>2024-06-28T22:03:25+08:00</updated>
     <author>
         <name>朱宇辰</name>
     </author>
@@ -14,17 +14,21 @@
         <author>
             <name>朱宇辰</name>
         </author>
-        <link href="https://zhuyuchen4588.github.io/ji-yubu-neng-cheng-wei-wo-men-shang-wang-de-suo-lian.html"/>
-        <id>https://zhuyuchen4588.github.io/ji-yubu-neng-cheng-wei-wo-men-shang-wang-de-suo-lian.html</id>
+        <link href="https://zhuyuchen4588.github.io/jiyu.html"/>
+        <id>https://zhuyuchen4588.github.io/jiyu.html</id>
+        <media:content url="https://zhuyuchen4588.github.io/media/posts/3/logo.png" medium="image" />
+            <category term="科技"/>
 
         <updated>2024-06-23T18:06:22+08:00</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://zhuyuchen4588.github.io/media/posts/3/logo.png" alt="" />
                     免责声明 本文章的内容是互联网中提取出来我认为比较有用的,假如你使用文章中的软件中遇到了啥,我不负任何责任.
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://zhuyuchen4588.github.io/media/posts/3/logo.png" class="type:primaryImage" alt="" /></p>
                 <h1>免责声明</h1>
 <p>本文章的内容是互联网中提取出来我认为比较有用的,假如你使用文章中的软件中遇到了啥,我不负任何责任.</p>
 <h1>极域简介</h1>
