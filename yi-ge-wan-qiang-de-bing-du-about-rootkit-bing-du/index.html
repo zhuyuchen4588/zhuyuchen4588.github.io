@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZYC&#39;s blog|朱宇辰的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/media/mdui/css/mdui.min.css">
+    <link rel="stylesheet" href="/media/css/post.css">
+    <link rel="stylesheet" href="/media/live2d/css/live2d.css" />
+    
+</head>
+<body class=" mdui-appbar-with-toolbar  mdui-theme-primary-pink mdui-theme-accent-pink">
+<header class="mdui-toolbar mdui-color-pink mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide" style="z-index: 1000">
+    <a href="javascript:;" mdui-drawer="{target: '#left-drawer',overlay:true}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+    <span class="mdui-typo-title">ZYC&#39;s blog|朱宇辰的博客</span>
+    <div class="mdui-toolbar-spacer"></div>
+<!--    <a href="javascript:history.go(0);" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
+</header>
+
+<div class="mdui-drawer mdui-color-white mdui-drawer-full-height mdui-drawer-close" id="left-drawer">
+    <ul class="mdui-list">
+        <li class="mdui-subheader">菜单</li>
+        
+        <li class="mdui-list-item mdui-ripple">
+            <a href="/" class="mdui-list-item-content">首页</a>
+        </li>
+        
+        <li class="mdui-list-item mdui-ripple">
+            <a href="/archives" class="mdui-list-item-content">归档</a>
+        </li>
+        
+    </ul>
+</div>
+
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <article id="post-1270" class="post-1270 post type-post status-publish format-standard hentry category-90 category-129 tag-149">
+                <header class="entry-header">
+                    <h1 class="entry-title">一个顽强的病毒——About-Rootkit病毒</h1>
+                    <p class="entry-census">发布于 2024-11-15</p>
+                    <hr>
+                </header>
+                <div class="neko">
+                    <p>前言<br>
+就在今天的晚上9点差不多，我闲无聊,把我的火绒删除换成了卡巴斯基,恰好呢,我又点开了全盘扫描，又又正好呢，查到了Rootkit病毒，接着呢，就发生了下面的事情</p>
+<p>正文<br>
+起先，我换了杀毒软件，全盘的时候找到了这个病毒，但是卡巴斯基它查完病毒右边不是有一个解决按钮嘛，你按那个解决按钮是没用的，然后还是高级清理了114514遍才成功清理的(其实只要一次,但是你必须不要管他)，接着，你的任务管理器，windows按键，打开文件等等都无法使用，是因为没用权限(这个权限好像是卡巴斯基夺走来删东西了，防止又有病毒自启动)，然后你的权限都没了，接着呢我就下了一个360，360这东西，安装老快了，我卸载的时候给我来了一个360软件下载工具啥的,无奈之下我只能投靠卡巴斯基，因为这时候chrome的网页是崩溃状态，也就是一个蓝色的文件夹中间有个一哭脸，接着你就啥也打不开，除非你事先有打开搜索引擎啥的，然后搜索引擎是可以使用的，也不知道是病毒还是卡巴斯基的问题，我本来想要alt+f4来关机，但是呢，按下去就直接给我黑屏，然后留下一个鼠标让我玩鼠标模拟器,再补充一点，让我吓死的一点，我不是下了一个360嘛，360在修复，然后右下角直接给我出来一个华硕圆孔的一个啥驱动！，这时候我还以为是被圆孔了，害得我开始乱动，给驱动退出了，但是修复完成之后我看了看D盘，是360给我装的(给360的建议，有事情要做说一声，不要一惊一乍的)，接着我就使用Geek把360删除了。</p>
+<p>About this 恶意病毒<br>
+我去百度百科查询了一下，发现这是一款吴迪的后门🐀，百度百科对rootkit的描述:在悬念迭起的中外谍战片里，对战双方中的一派势力通常会派遣特工人员潜伏到对手阵营中。这名卧底人员良好的伪装使得对手对此长时间毫无察觉；为了能够长期潜伏他不贸然采取高风险行为以免过早暴露自己；他赢得敌人的信任并因此身居要职，这使得他能够源源不断地获取重要情报并利用其独特渠道传送回去。<br>
+从某种意义上说这位不速之客就是Rootkit——持久并毫无察觉地驻留在目标计算机中，对系统进行操纵、并通过隐秘渠道收集数据的程序。Rootkit的三要素就是：隐藏、操纵、收集数据。<br>
+“Rootkit”中root术语来自于unix领域。由于unix主机系统管理员账号为root账号，该账号拥有最小的安全限制，完全控制主机并拥有了管理员权限被称为“root”了这台电脑。然而能够“root”一台主机并不意味着能持续地控制它，因为管理员完全可能发现了主机遭受入侵并采取清理措施。因此Rootkit的初始含义就在于“能维持root权限的一套工具”。简单地说，Rootkit是一种特殊的[恶意软件]，它的功能是在安装目标上隐藏自身及指定的文件、进程和[网络链接]等信息，比较多见到的是Rootkit一般都和[木马]、后门等其他恶意程序结合使用。Rootkit通过加载特殊的驱动，修改系统[内核]，进而达到隐藏信息的目的。NSA安全和[入侵检测]术语字典( NSA Glossary of Terms Used in Security and Intrusion Detection)对rootkit的定义如下：A hacker security tool that captures passwords and message traffic to and from a computer. A collection of tools that allows a hacker to provide a backdoor into a system, collect information on other systems on the network,mask the fact that the system is compromised, and much more. Rootkit is a classic example of Trojan Horse software. Rootkit is available for a wide range of operating systems.<br>
+rootkit并不一定是用作获得系统root访问权限的工具。实际上，rootkit是攻击者用来隐藏自己的踪迹和保留root访问权限的工具。通常，攻击者通过远程攻击获得root访问权限，或者首先密码猜测或者密码强制破译的方式获得系统的访问权限。进入系统后，如果他还没有获得[root权限]，再通过某些安全漏洞获得系统的root权限。接着，攻击者会在侵入的主机中安装rootkit，然后他将经常通过rootkit的后门检查系统是否有其他的用户登录，如果只有自己，攻击者就开始着手清理[日志]中的有关信息。通过rootkit的[嗅探器]获得其它系统的用户和密码之后，攻击者就会利用这些信息侵入其它的系统。<br>
+上面的信息来源于百度百科</p>
+<p>解决方法<br>
+1.使用杀毒软件，推荐360、卡巴斯基(我当时用的这款)，这里强烈推荐卡巴斯基，你可以永远相信卡巴斯基(把我自己写的软件删了，软件类型是停止网络驱动来实现极域开网)，检测还是不错的，然后删除也是挺快的，肥肠的好用<br>
+2.我在中毒删除的中途，在网上还看到了一种方法</p>
+<p>进入安全模式<br>
+对于 Windows 系统：在开机过程中，不断按 F8 键（不同电脑可能有差异，有的可能是 F5 或其他功能键），直到出现高级启动选项菜单，选择 “安全模式” 或 “带网络连接的安全模式”（如果需要下载工具）。安全模式下只加载最基本的驱动和系统服务，可以防止 Rootkit 在正常启动时干扰查杀过程。<br>
+使用专业的杀毒软件<br>
+知名杀毒软件：如卡巴斯基、诺顿、迈克菲等商业杀毒软件，以及一些免费且可靠的软件，如小红伞（Avira）、AVG 等。这些软件都有 Rootkit 扫描和清除功能。更新到最新的病毒库后，对整个计算机进行全面扫描。<br>
+专门的 Rootkit 扫描工具：例如 GMER、Rootkit Unhooker 等。这些工具专门设计用于检测和删除 Rootkit。以 GMER 为例，运行后它会扫描系统内存、注册表、文件系统等关键区域，查找隐藏的 Rootkit 组件。<br>
+手动检查和清理可疑文件及注册表项（谨慎操作）<br>
+检查启动项：使用系统配置实用程序（在运行中输入 “msconfig”），查看启动选项卡，禁用那些看起来可疑的启动项目。对于不确定的项，可以通过搜索引擎查询其相关信息。<br>
+检查注册表：Rootkit 可能会在注册表中留下痕迹，以实现自启动或隐藏文件等功能。在运行中输入 “regedit” 打开注册表编辑器，重点检查以下键值：<br>
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run<br>
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run<br>
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\RunOnce<br>
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce<br>
+以及其他可能被利用的隐藏键值。如果发现可疑的键值（例如指向不明路径的键值），可以先备份该项，然后再删除。<br>
+检查系统目录和隐藏文件：显示所有隐藏文件和文件夹（在文件夹选项中设置），检查系统目录（如 C:\Windows、C:\Windows\System32 等）以及其他可能隐藏 Rootkit 文件的位置。注意那些修改日期异常或文件名可疑的文件。<br>
+重新安装操作系统（极端情况）<br>
+如果上述方法都无法有效清除 Rootkit 病毒，或者系统已经被严重破坏，可以考虑重新安装操作系统。在重新安装之前，务必备份重要的数据文件。可以使用外部硬盘、U 盘或云存储服务进行备份。<br>
+在整个清除 Rootkit 病毒的过程中，要保持计算机与网络的隔离（如果可能的话），防止病毒与外部控制端通信或下载新的恶意组件。如果对操作不确定，建议寻求专业的计算机安全人员的帮助。<br>
+上面的内容是在网上看到的，如果有侵权请告诉我<br>
+结尾<br>
+总而言之，还是不要相信一些打上免费 crack 破解 开裂 的应用或程序了，保护好自己的电脑！</p>
+
+                </div>
+            </article>
+        </main>
+    </div>
+    <div class="doc-footer-nav mdui-color-theme">
+        <div class="mdui-container">
+            <div class="mdui-row">
+                
+                <div class="mdui-col-xs-2 mdui-col-sm-6 doc-footer-nav-left"></div>
+                
+                
+                <div class="mdui-col-xs-2 mdui-col-sm-6 doc-footer-nav-left"></div>
+                
+            </div>
+        </div>
+    </div>
+    <br>
+    
+    
+</div>
+<footer class="mdui-container footer ">
+<!--    <div class="head_card-offset"></div>-->
+    <div class="mdui-row mdui-row-gapless">
+        <div class="k-container">
+            <img width="100%" src="/media/img/skirt.png">
+        </div>
+    </div>
+
+    <div class="site-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+</footer>
+<div id="landlord" style="left:5px;bottom:0px;">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+            <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+            <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？"/>
+            <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+    </div>
+    <input name="live_talk" id="live_talk" value="1" type="hidden" />
+    <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        <div class="live_ico_item type_music" id="musicButton"></div>
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input name="live2dBGM" value="https://img.apa70.com/123.mp3" type="hidden">
+        <input name="live2dBGM" value="https://img.apa70.com/123.mp3" type="hidden">
+        <input id="duType" value="douqilai,l2d_caihong" type="hidden">
+    </div>
+</div>
+<div id="open_live2d">召唤伊斯特瓦尔</div>
+<script>
+    var message_Path = '/media/live2d/';//资源目录，如果目录不对请更改
+    var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口路径
+</script>
+<!--<script src="/media/js/jquery-3.3.1.min.js"></script>-->
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/media/live2d/js/message.js"></script>
+
+</body>
+<script src="/media/mdui/js/mdui.min.js"></script>
+<script src="/media/layer/layer.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.11.1/dist/av-min.js"></script>
+<script src="//unpkg.com/vue@next"></script>
+<script>
+    
+</script>
+<script type="module" src="/media/js/post.js"></script>
+</html>
